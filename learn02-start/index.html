@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding JavaScript to HTML</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        function myfunction(){
+            document.getElementById("sample").innerHTML = "Changed from a function in the head section"
+        }
+    </script>
+    <script src="scripts/script.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Adding JavaScript to HTML</h1>
+    </header>
+    <main>
+        <button type="button" onclick="myfunction()">Call Function in Head</button>
+        <button type="button" onclick="myfunction2()">Call Function in External Script</button>
+        <p id="start"></p>
+        <script>
+            document.getElementById("start").innerHTML = "JavaScript inside the script tag"
+        </script>
+
+        <p id="sample">
+            This paragraph has an ID of sample
+        </p>
+        <button type="button" onclick='document.getElementById("sample").innerHTML = "Aidan Barrett"'>Click Here</button>
+        <div class="buttons">
+            <button onclick="document.getElementById('pet').src='images/dog.jpg'">dog</button>
+            <button onclick="document.getElementById('pet').src='images/cat.jpg'">cat</button>
+        </div>
+
+        <img src="images/dog.jpg" alt="animal" id="pet" class="center">
+        <button onclick="document.getElementById('pet').style.display='none'"></button>
+        <div class="buttons">
+            <button onclick="document.getElementById('pet').style.display='block'">show</button>
+            <button onclick="document.getElementById('pet').style.display='none'">hide</button>
+        </div>
+
+        <div id="output">
+            <h2>Output</h2>
+            <script>
+                document.write("document.write");
+            </script>
+            <p id="oops"></p>
+            <button onclick="document.write ('OOPS!')">OOPS</button>
+
+            <script>
+                alert("Wow, this is an alert!")
+            </script>
+
+            <script>
+                console.log('This is my log')
+            </script>
+        </div>
+    </main>
+    <footer>
+        <p>&copy;2022 Meri Engel</p>
+    </footer>
+</body>
+
+</html>
